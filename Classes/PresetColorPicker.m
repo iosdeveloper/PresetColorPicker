@@ -70,7 +70,7 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [delegate colorSelected:[[self presetColors] objectAtIndex:[indexPath row] + [[self presetColors] count] / 2]];
+    [delegate colorSelected:[[self presetColors] objectAtIndex:[[self presetColors] count] / 2 + [indexPath row]]];
 	
 	[self dismissModalViewControllerAnimated:YES];
 }
