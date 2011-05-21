@@ -10,14 +10,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	[[self view] setBackgroundColor:[UIColor clearColor]];
-	
 	UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
 	[button addTarget:self action:@selector(selectColor) forControlEvents:UIControlEventTouchUpInside];
 	[button setFrame:CGRectMake(0.0, 0.0, 320.0, 460.0)];
+	[button setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
 	[button setTag:100];
 	[button setTitle:@"Select color" forState:UIControlStateNormal];
-	[button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+	[button setTitleColor:[UIColor darkTextColor] forState:UIControlStateNormal];
 	
 	[[self view] addSubview:button];
 }
